@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <style>
+        #addBtn {
+            max-width: 40px;
+        }
+        
+        .delBtn {
+            max-width: 40px;
+        }
+    </style>
+    <title>Postman</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Postman Clone</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h2 class="my-2">Postman Clone</h2>
+        <div class="mb-3 row my-3">
+            <label for="inputPassword" class="col-sm-2 col-form-label">URL</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="url" placeholder="Enter URL...">
+            </div>
+        </div>
+
+        <div class="mb-3 row my-3">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Request Type</label>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="TypeOfRequest" id="GetRadio" value="get" checked>
+                    <label class="form-check-label" for="getRequest">GET</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="TypeOfRequest" id="PostRadio" value="post">
+                    <label class="form-check-label" for="postRequest">POST</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3 row my-3">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Content Type</label>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="responseRequest" id="jsonRadio" value="json" checked>
+                    <label class="form-check-label" for="json">JSON</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="responseRequest" id="paramsRadio" value="params">
+                    <label class="form-check-label" for="params">Custom Parameters</label>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="paramtersBox">
+            <div class="mb-3 row my-3">
+                <label for="params" class="col-sm-2 col-form-label">Parameter 1</label>
+                <div class="col-sm-4">
+                    <input type="params" class="form-control" id="key1" placeholder="Enter key">
+                </div>
+
+                <div class="col-sm-4">
+                    <input type="params" class="form-control" id="value1" placeholder="Enter value">
+                </div>
+                <button class="btn btn-primary col-sm-1" id="addBtn">+</button>
+            </div>
+            <div id="params"></div>
+
+
+        </div>
+
+        <div class="mb-3 row my-3" id="jsonBox">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Enter JSON Request</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" aria-label="With textarea" id="requestTxt"></textarea>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" id="submit">Submit</button>
+        <div class="mb-3 row my-3">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Response</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" aria-label="With textarea" id="response" rows="10"></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+<script src="js/index.js"></script>
+
+</html>
